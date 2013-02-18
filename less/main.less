@@ -1,0 +1,591 @@
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+/* ==========================================================================
+   Import of external files
+   ========================================================================== */
+
+@import "bootstrap.less";
+
+
+
+/* ==========================================================================
+   Declaration
+   ========================================================================== */
+
+@baseurl: '';
+@cdn: '';
+
+@font-face {
+	font-family: 'Cherry Swash';
+	src: url('../font/cherryswash-bold-webfont.eot');
+	src: url('../font/cherryswash-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../font/cherryswash-bold-webfont.woff') format('woff'),
+		 url('../font/cherryswash-bold-webfont.ttf') format('truetype'),
+		 url('../font/cherryswash-bold-webfont.svg#Cherry Swash') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@orangecolor: #ef4841;
+@turquoisecolor: #4DB3B7;
+@bluecolor: #176B81;
+@greyfontcolor: #414f57;
+@blackcolor: #424F57;
+@headline: "Cherry Swash", Helvetica, Arial, serif;
+
+
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+html, body, html a{
+	-webkit-font-smoothing: antialiased;
+	color: white;
+}
+
+body {
+	line-height: 19px;
+	font-size: 0.9em;
+	color: white;
+
+}
+
+p {
+	margin: 15 0 0 0;
+}
+
+h1{
+	font-family: @headline;
+	font-size: 2.5em;
+	font-weight: normal;
+	line-height: 46px;
+	margin-bottom: 5px;
+}
+
+h2{
+	font-size: 1.125em;
+	line-height: 1.1em;
+	font-weight: bold;
+	margin: 0 0 14px 0;
+}
+
+h3{
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 21px;
+	margin: 0 0 14px 0;
+}
+
+ul{
+	margin: 0px;
+}
+
+.exstended-margin {
+	margin-left: 30px;
+}
+
+
+
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
+
+.container {
+	padding-top: 22px;
+}
+
+.btn:hover {
+	color: #FFFFFF;
+}
+
+.btn-email{
+	width: 155px;
+	background-image: none;
+	border: none;
+	border-radius: 3px;
+	font-size: 1.125em;
+	font-weight: bold;
+	color: white;
+	text-shadow: none;
+}
+
+.jumbotron{
+	background: url('@{cdn}@{baseurl}../img/billboard-long-pic.jpg');
+	background-repeat: none; 
+	background-position: 50% top;
+	height: 537px;
+
+	a:hover {
+		color: #FFFFFF;
+	}
+
+	.contentwrap {
+		position: relative;
+		height: 515px;
+	}
+
+	.arrow-down {
+		width: 0; 
+		height: 0; 
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-top: 8px solid #FFFFFF;
+		display: inline;
+		margin-left: 10px;
+		margin-top: 5px;
+		float: left;
+		content: " ";
+	}
+
+	.workforus {
+		position: absolute;
+		font-weight: bold;
+		bottom: 0;
+		right: 0;
+		padding: 10px 15px 10px 15px;
+		background-color: @orangecolor;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		span {
+			display: inline;
+			float: left;
+		}
+	}
+
+	h1{
+		font-size: 3.125em;
+		text-shadow: 1px 1px 1px grey;
+		padding-top: 60px;
+	}
+
+	.btn-email{
+		margin-top: 18px;
+		background-color: @orangecolor;
+	}
+}
+
+.brand{
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -738px;
+	width: 180px;
+	height: 50px;
+}
+
+.icon-electronicmail{
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -647px;
+	width: 33px;
+	height: 22px;
+	margin-right: 10px;
+	margin-top: -2px !important;
+}
+
+.navbar-inner{
+	background-color: transparent;
+	background-image: none;
+	filter: alpha(opacity=100); /* IE */
+	border: 0px;
+	box-shadow: none;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+	background-color: transparent;
+	border: 0px;
+	box-shadow: 0px 0px 0px;
+}
+
+.navbar .nav > li > a{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: none;
+	border-top: solid 1px @orangecolor;
+	padding-left: 0px;
+	margin-top: 20px;
+	margin-left: 25px;
+}
+
+.navbar .nav > li > a:hover{
+	color: @orangecolor;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: none;
+	border-top: solid 1px @orangecolor;
+	padding-left: 0px;
+	margin-top: 20px;
+	margin-left: 25px;
+}
+
+.about, .services{
+	background-color: @orangecolor;
+	padding-bottom: 100px;
+
+}
+
+.employers{
+	background-color: @turquoisecolor;
+	padding-bottom: 80px;
+	
+		img {
+			margin: 20px 0 20px 0;
+		}
+}
+
+.lookforemployees {
+	background-color: @blackcolor;
+	padding-bottom: 100px;
+
+	.btn-email {
+		background-color: @turquoisecolor;
+		width: 203px;
+	}
+}
+
+.customers{
+	background-color: @bluecolor;
+	padding-bottom: 100px;
+
+	.media-object{width: 200px;}
+
+	.pull-left{padding-top: 5px;}
+	.pull-right{padding-top: 50px;}
+}
+
+.footer{
+	background: url('@{cdn}@{baseurl}../img/footer-long-pic.jpg');
+	background-repeat: none; 
+	background-position: 70%;
+	height: 100%;
+
+	hr{border-top: solid 1px @greyfontcolor;border-bottom: solid 1px @greyfontcolor;}
+
+	h1{color: @greyfontcolor;}
+
+	h2{color: @greyfontcolor;font-weight: 500;}
+
+	a{color: @orangecolor;}
+
+	.tothetop{
+		width: 100px;
+		margin-left: auto;
+		margin-right: auto;
+
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			margin-bottom: 6px;
+		}
+	}
+
+	.uparrow:hover{
+		margin-top: -45px;
+		height: 41px;
+	}
+
+}
+
+.buttonwrap{
+	text-align: center;
+	padding-top: 10px;
+
+	.textwrap{text-align: left;}
+
+	span{padding-top: 0px;}
+
+	.btn-readmore{
+		margin-top: 60px;
+		background-image: none;
+		background-color: rgba(0,0,0,.2);
+		background-color: grey\9; /* IE8 or below */
+		filter: alpha(opacity=30);  /* IE */
+		width: 10%;
+		color: white;
+		text-shadow: none;
+	}
+
+}
+
+.carousel-inner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 100px;
+	overflow: hidden;
+
+	img{padding-right: 30px;}
+
+	.media{vertical-align: middle;}
+}
+
+.carousel-control{
+  background: transparent;
+  border: 0px;
+  margin-top: -11px;
+}
+
+.button{
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 0px !important;
+	margin-bottom: 0px;
+}
+
+.adress{
+	color: @greyfontcolor;
+	font-size: 1.125em;
+	font-weight: bold;
+}
+
+.social img {
+	margin-right: 6px;
+}
+
+.quote{
+	margin-left: 20px;
+	font-style: italic;
+	font-size: 1.125em;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+
+
+/* ==========================================================================
+   Spritesheet
+   ========================================================================== */
+
+.entreprenorskyrkan{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 0;
+	width: 298px;
+	height: 37px;
+	content: " ";
+}
+
+.hornwines{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -574px;
+	width: 300px;
+	height: 50px;
+	content: " ";
+}
+
+.thingsquare{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -491px;
+	width: 300px;
+	height: 44px;
+	content: " ";
+}
+
+.lowen-widman{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -48px;
+	width: 302px;
+	height: 19px;
+	content: " ";
+}
+
+.snorisar{
+	margin-top: 30px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -85px;
+	width: 298px;
+	height: 81px;
+	content: " ";
+}
+
+.tocco{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -186px;
+	width: 295px;
+	height: 60px;
+	content: " ";
+}
+
+.greencup{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -274px;
+	width: 100px;
+	height: 109px;
+	content: " ";
+}
+
+.prolyde{
+	margin-top: 80px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -414px;
+	width: 158px;
+	height: 39px;
+	padding-top: 0 !important;
+	padding-left: 0 !important;
+	content: " ";
+}
+
+.loupe{
+	margin-top: 50px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -1012px;
+	width: 300px;
+	height: 107px;
+	content: " ";
+}
+
+.entreprenorskyrkancarousel{
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -961px;
+	width: 199px;
+	height: 25px;
+	margin-top: 38px;
+	
+}
+
+.snorisarcarousel{
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -814px;
+	width: 200px;
+	height: 55px;
+	margin-top: 20px;
+}
+
+.lowen-widmancarousel{
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -993px;
+	width: 200px;
+	height: 13px;
+	margin-top: 43px;
+}
+
+.loupecarousel{
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -877px;
+	width: 200px;
+	height: 72px;
+	margin-top: 10px;
+}
+
+.uparrow{
+	display: block;
+	margin-top: -20px;
+	margin-left: 30px;
+	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -679px;
+	width: 28px;
+	height: 16px;
+}
+
+
+
+/* ==========================================================================
+   Fixing what IE are unable to do itself.... ugh!
+   ========================================================================== */
+
+.lt-ie9 .img-circle {
+	behavior: url(PIE.htc);
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
