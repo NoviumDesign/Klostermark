@@ -260,10 +260,28 @@ ul{
 	background-color: @bluecolor;
 	padding-bottom: 100px;
 
-	.media-object{width: 200px;}
+	a {
+		display: block;
+	}
 
-	.pull-left{padding-top: 5px;}
-	.pull-right{padding-top: 50px;}
+	.media {
+		a {
+			display: block;
+		}
+
+		a:hover {
+			color: #FFFFFF;
+			text-decoration: none;
+		}		
+	}
+
+	.media-object{
+		width: 200px;
+	}
+
+	.logos div {
+		float: left;
+	}
 }
 
 .footer{
@@ -271,6 +289,11 @@ ul{
 	background-repeat: none; 
 	background-position: 70%;
 	height: 100%;
+	color: #414F57;
+	
+	span {
+		font-size: 1.125em;
+	}
 
 	hr{border-top: solid 1px @greyfontcolor;border-bottom: solid 1px @greyfontcolor;}
 
@@ -289,6 +312,7 @@ ul{
 			text-decoration: none;
 			font-weight: bold;
 			margin-bottom: 6px;
+			font-size: 14px;
 		}
 	}
 
@@ -370,7 +394,7 @@ ul{
    ========================================================================== */
 
 .entreprenorskyrkan{
-	margin-top: 50px;
+	margin-top: 55px;
 	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 0;
 	width: 298px;
 	height: 37px;
@@ -410,7 +434,7 @@ ul{
 }
 
 .tocco{
-	margin-top: 50px;
+	margin-top: 60px;
 	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -186px;
 	width: 295px;
 	height: 60px;
@@ -419,17 +443,17 @@ ul{
 
 .greencup{
 	margin-top: 50px;
-	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -274px;
+	background: url('/img/spritesheet.png') no-repeat -1px -274px;
 	width: 100px;
 	height: 109px;
 	content: " ";
 }
 
 .prolyde{
-	margin-top: 80px;
-	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -414px;
-	width: 158px;
-	height: 39px;
+	margin-top: 45px;
+	background: url('/img/spritesheet.png') no-repeat -4px -411px;
+	width: 290px;
+	height: 70px;
 	padding-top: 0 !important;
 	padding-left: 0 !important;
 	content: " ";
@@ -437,10 +461,18 @@ ul{
 
 .loupe{
 	margin-top: 50px;
-	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat -1px -1012px;
+	background: url('/img/spritesheet.png') no-repeat -1px -1012px;
 	width: 300px;
-	height: 107px;
+	height: 114px;
 	content: " ";
+}
+
+.wv {
+	margin-top: 50px;
+	margin-left: 65px;
+	background: url('/img/spritesheet.png') no-repeat -121px -274px;
+	width: 106px;
+	height: 108px;
 }
 
 .entreprenorskyrkancarousel{
@@ -466,10 +498,17 @@ ul{
 }
 
 .loupecarousel{
-	background: url('@{cdn}@{baseurl}/img/spritesheet.png') no-repeat 0 -877px;
+	background: url('/img/spritesheet.png') no-repeat 0 -877px;
 	width: 200px;
-	height: 72px;
+	height: 76px;
 	margin-top: 10px;
+}
+
+.horncarousel {
+	background: url('/img/spritesheet.png') no-repeat -2px -1137px;
+	width: 196px;
+	height: 33px;
+	margin-top: 30px;
 }
 
 .uparrow{
@@ -480,18 +519,6 @@ ul{
 	width: 28px;
 	height: 16px;
 }
-
-
-
-/* ==========================================================================
-   Fixing what IE are unable to do itself.... ugh!
-   ========================================================================== */
-
-.lt-ie9 .img-circle {
-	behavior: url(PIE.htc);
-}
-
-
 
 /* ==========================================================================
    Helper classes

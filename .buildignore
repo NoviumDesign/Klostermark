@@ -1,2 +1,8 @@
 less
 *.jade
+.buildignore
+*.md
+grunt.js
+.DS_Store
+package.json
+*.psd
